@@ -20,7 +20,7 @@ body {
    justify-content: center;
    flex-direction: column;
    gap: 20px;
-   background-image: url(/images/background.jpeg);
+   background-image: url(./images/background.jpeg);
    background-repeat: no-repeat;
    background-size: cover;
    position: relative;
