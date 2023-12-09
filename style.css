@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300;500&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 20px;
+   background-image: url(/images/background.jpeg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   background-position: center;
+   font-family: 'Poppins', sans-serif;
+   overflow: hidden;
+
+}
+
+#main {}
+
+#game-container {
+   height: 350px;
+   width: 350px;
+   /* border: 6px solid white; */
+   display: grid;
+   grid-template-columns: repeat(10, 1fr);
+   grid-template-rows: repeat(10, 1fr);
+   border-radius: 5px;
+
+}
+
+.character {
+   width: 2.7rem;
+   transition: 1s ease;
+
+}
+
+#score-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 15px;
+
+}
+
+#score-container h3 {
+   font-size: 2rem;
+   color: #fff;
+   /* White text */
+   text-shadow: 1px 1px 2px #336699;
+   /* Blue shadow */
+
+
+}
+
+#score-container h2 {
+   font-size: 2rem;
+   color: #9918FF;
+   text-align: center;
+   color: #fff;
+   text-shadow: 1px 1px 2px #336699;
+}
+
+#high-score-h3 {
+   text-align: center;
+   text-shadow: 1px 1px 2px white;
+
+}
+
+#game-menu {
+   height: 100vh;
+   width: 100%;
+   position: absolute;
+   background: transparent;
+   backdrop-filter: blur(8px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   transition: 0.4s ease-in;
+   gap: 10px;
+
+}
+
+#game-menu.out {
+   transform: translateX(-100%);
+
+}
+
+#game-menu img {
+   width: 300px;
+   animation-name: mainlogo;
+   animation-duration: 1.2s;
+}
+
+#game-menu button {
+   padding: 15px 60px;
+   border-radius: 30px;
+   border: 2px solid white;
+   font-size: 1.5rem;
+   background-color: #9918FF;
+   color: #FF9D38;
+   font-weight: 800;
+   box-shadow: 2px 4px 15px black;
+   animation-name: playbtn;
+   animation-duration: 2s;
+
+}
+
+@keyframes playbtn {
+   0% {
+      scale: 0;
+
+   }
+
+   100% {
+      scale: 1;
+
+   }
+}
+
+@keyframes mainlogo {
+   0% {
+      scale: 0;
+
+   }
+
+   100% {
+      scale: 1;
+
+   }
+}
+
+
+#game-over {
+   height: 100vh;
+   width: 100%;
+   position: absolute;
+   background: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   transition: 0.2s ease-in;
+   gap: 20px;
+   transform: scale(0);
+   overflow: hidden;
+}
+
+#game-over h2 {
+   font-size: 3rem;
+}
+
+#game-over h4 {
+   font-size: 1.3rem;
+}
+
+#game-over button {
+   padding: 12px 60px;
+   border-radius: 30px;
+   border: 2px solid white;
+   font-size: 1.5rem;
+   background-color: #9918FF;
+   color: #fff;
+   font-weight: 800;
+}
